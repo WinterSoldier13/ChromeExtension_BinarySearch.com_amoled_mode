@@ -1,6 +1,7 @@
 console.log("BinarySearch DarkMode loaded")
 goDark();
 
+// TODO this need to be called after every DOM update
 function invertImage()
 {
     console.log("Inverting images");
