@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "BinarySearch Amoled DarkMode",
+    "description": "This extension changes the BinarySearch color to Black",
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "window.html",
+        "default_title": "BinarySearch Dark"
+    },
+    "permissions": [
+        "https://binarysearch.com/*",
+        "https://binarysearch.io/*",
+        "https://www.binarysearch.com/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*.binarysearch.com/", "https://binarysearch.com/*"],
+            "js": [
+                "background.js"
+            ]
+        }
+    ]
+}
