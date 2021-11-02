@@ -21,7 +21,7 @@ image2:
 
 
 ## Known bugs
-While navigating through different channels the profile_images may turn negative. Need to fix that by using `on_click` in `backgroud.js`.
+During chatting on a `#channel` the new user_images MAY appear negative.
 
 ## Contribution
 Fork this repo and make a PR :)
