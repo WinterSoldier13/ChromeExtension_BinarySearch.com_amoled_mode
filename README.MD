@@ -1,5 +1,17 @@
 # BinarySearch.io OLED DarkMode Chrome Extension
 
+### Screenshots
+<div>
+image1:
+<img src="./assest/img1.png">
+</div>
+<br>
+<div>
+image2:
+<img src="./assest/img2.png">
+</div>
+
+
 ## How to use?
 1. make sure you have your binarysearch.com account in LIGHT mode.
 2. clone this repo
