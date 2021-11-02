@@ -1,7 +1,6 @@
 console.log("BinarySearch DarkMode loaded")
 goDark();
 
-// TODO this need to be called after every DOM update
 function invertImage()
 {
     console.log("Inverting images");
@@ -10,17 +9,37 @@ function invertImage()
     
     var l1 = onlineImages.length;
     var l2 = onlineImages.length;
+    try{
+        for(i=0;i<l1;i++)
+        {
+            onlineImages[i].style.filter = "invert(100%)";
+        }
 
-    for(i=0;i<l1;i++)
-    {
-        onlineImages[i].style.filter = "invert(100%)";
+        for(i=0;i<l2;i++)
+        {
+            userImage[i].style.filter = "invert(100%)";
+        }
     }
-
-    for(i=0;i<l2;i++)
+    catch(err)
     {
-        userImage[i].style.filter = "invert(100%)";
+        console.log(err);
     }
 }
+MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
+
+var observer = new MutationObserver(function(mutations, observer) 
+{
+    // console.log(mutations.length);
+    if(mutations.length > 5)
+    {
+        invertImage();
+    }
+});
+
+observer.observe(document, {
+  subtree: true,
+  attributes: true
+});
 
 function goDark() {
 
