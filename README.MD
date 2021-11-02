@@ -16,7 +16,7 @@ image2:
 1. make sure you have your binarysearch.com account in LIGHT mode.
 2. clone this repo
 3. Open chrome://extensions/
-4. click "Load Unpacked" and then select the repo folder.
+4. click "Load Unpacked" and then select the repo folder. (You need to have developer mode enabled inorder to do this)
 5. Now everytime you open binarysearch.com or binarysearch.io, it will be turned into dark-black(OLED) mode :D.
 
 
