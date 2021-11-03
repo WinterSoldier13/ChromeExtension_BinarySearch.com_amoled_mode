@@ -6,9 +6,11 @@ function invertImage()
     console.log("Inverting images");
     var onlineImages = document.getElementsByClassName('Avatar_image__32vUe');
     var userImage = document.getElementsByClassName('Avatar_image__rIlQi');
+    var profileImage = document.getElementsByClassName('Avatar_larger__1KDo4');
     
     var l1 = onlineImages.length;
-    var l2 = onlineImages.length;
+    var l2 = userImage.length;
+    var l3 = profileImage.length;
     try{
         for(i=0;i<l1;i++)
         {
@@ -18,6 +20,10 @@ function invertImage()
         for(i=0;i<l2;i++)
         {
             userImage[i].style.filter = "invert(100%)";
+        }
+        for(i=0;i<l3;i++)
+        {
+            profileImage[i].style.filter = "inver(100%)";
         }
     }
     catch(err)
@@ -30,7 +36,7 @@ MutationObserver = window.MutationObserver || window.WebKitMutationObserver;
 var observer = new MutationObserver(function(mutations, observer) 
 {
     // console.log(mutations.length);
-    if(mutations.length > 5)
+    if(mutations.length > 3)
     {
         invertImage();
     }
