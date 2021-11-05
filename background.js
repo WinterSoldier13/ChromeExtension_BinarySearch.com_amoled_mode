@@ -23,7 +23,7 @@ function invertImage()
         }
         for(i=0;i<l3;i++)
         {
-            profileImage[i].style.filter = "inver(100%)";
+            profileImage[i].style.filter = "invert(100%)";
         }
     }
     catch(err)
